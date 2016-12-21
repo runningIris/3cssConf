@@ -1,0 +1,35 @@
+.beard{
+	color: black;
+	background-color: currentColor;
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+	transform-origin: 50% 50%;
+	position: absolute;
+}
+.beard:nth-child(1){
+	transform: translate(400px, 300px);
+}
+.beard:nth-child(2){
+	transform: translate(300px, 300px) scaleX(-1);
+
+}
+
+.beard::before{
+	content: '';
+	position: relative;
+	display: block;
+	height: 200px;
+	width: 200px;
+	top: -45px;
+	transform: rotate(120deg);
+	transform-origin: 50% 50%;
+	left: 60px;
+	background-color: rgba(0,67,147,0);
+	border-right: 100px solid rgba(66,66,0,0.6);
+	border-radius: 0 100% 0 40px;
+	box-sizing: border-box; 
+}
+.beard::after{
+	/*content: 'width';*/
+}
