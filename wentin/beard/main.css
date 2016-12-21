@@ -4,7 +4,7 @@
 	height: 200px;
 	width: 200px;
 	border-radius: 100%;
-	transform-origin: 50% 50%;
+	transform-origin: 100px 100px;
 	position: absolute;
 }
 .beard:nth-child(1){
