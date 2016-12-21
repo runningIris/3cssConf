@@ -1,0 +1,58 @@
+body{
+	background: rgb(0,34,65);
+	/*height: 1000px;*/
+	font-family: 'Times New Roman';
+}
+
+.content: {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.title{
+	margin: 100px;
+	line-height: 150%;
+	text-align: center;
+	color: rgb(131,236,185);
+}
+
+.guide{
+	/*width: 200px;*/
+}
+
+.main{
+	width: 500px;
+	margin: 0 auto;
+	/*position: absolute;*/
+}
+
+a.work-link{
+	/*width: 700px;*/
+	display: block;
+	color: rgb(255, 226, 0);
+	text-decoration: none;
+	text-align: left;
+}
+
+a.work-link::before{
+	content: '';
+	display: block;
+	height: 50px;
+	width: 5px;
+	background: rgb(66,66,66);
+	position: relative;
+	top: 40px;
+	left: -20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
