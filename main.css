@@ -30,22 +30,23 @@ body{
 a.work-link{
 	/*width: 700px;*/
 	display: inline-block;
+	font-size: 2em;
 	color: rgb(255, 226, 0);
 	/*color: white;*/
 	text-decoration: none;
 	text-align: left;
-	padding: 0 20px 20px;
+	padding: 0 1em 1em;
 	border-radius: 25px;
 }
 
 a.work-link::before{
 	content: '';
 	display: block;
-	height: 30px;
+	height: 1em;
 	width: 5px;
 	background: rgb(155,155,155);
 	position: relative;
-	top: 20px;
+	top: 1em;
 	left: -20px;
 }
 
@@ -55,6 +56,39 @@ a.work-link:hover{
 	
 }
 
+/*beard*/
+
+.beard{
+	color: black;
+	background-color: currentColor;
+	height: 20px;
+	width: 20px;
+	border-radius: 100%;
+	transform-origin: 10px 10px;
+	position: absolute;
+}
+.beard:nth-child(3){
+	transform: translate(360px, -22px) rotate(0deg);
+}
+.beard:nth-child(2){
+	transform: translate(345px, -22px) scaleX(-1) rotate(0deg);
+
+}
+.beard::before{
+	content: '';
+	display: block;
+	height: 25px;
+	width: 30px;
+	position: relative;
+	left: -10px;
+	top: -15px;
+	transform: rotate(120deg);
+	transform-origin: 20px bottom;
+	/*background-color: rgba(130,20,60,0.5);*/
+	border-right: 20px solid black;
+	border-radius: 0 100% 0 10px;
+	box-sizing: border-box; 
+}
 
 
 
