@@ -1,3 +1,10 @@
+body{
+	font-family: 'times new roman';
+	font-weight: bold;
+}
+
+/*beard*/
+
 .beard{
 	color: black;
 	background-color: currentColor;
@@ -7,11 +14,11 @@
 	transform-origin: 100px 100px;
 	position: absolute;
 }
-.beard:nth-child(1){
-	transform: translate(400px, 300px);
+.beard:nth-child(3){
+	transform: translate(600px, 300px) rotate(0deg);
 }
 .beard:nth-child(2){
-	transform: translate(250px, 300px) scaleX(-1);
+	transform: translate(450px, 300px) scaleX(-1) rotate(0deg);
 
 }
 
@@ -29,4 +36,25 @@
 	border-right: 200px solid black;
 	border-radius: 0 100% 0 100px;
 	box-sizing: border-box; 
+}
+
+/*description*/
+.description{
+	position: absolute;
+	top: 300px;
+	left: 1300px;
+	height: auto;
+	width: auto;
+	font-size:5em; 
+	color: pink;
+}
+
+/*Home*/
+.home{
+	position: absolute;
+	top: 100px;
+	left: 1300px;
+	color: rgba(0,110,130, 0.6);
+	font-size: 5em;
+	text-decoration: none;
 }

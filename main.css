@@ -1,5 +1,5 @@
 body{
-	background: rgb(0,34,65);
+	/*background: rgb(0,34,65);*/
 	/*height: 1000px;*/
 	font-family: 'Times New Roman';
 }
@@ -11,7 +11,7 @@ body{
 
 .title{
 	margin: 100px;
-	line-height: 150%;
+	/*line-height: 150%;*/
 	text-align: center;
 	color: rgb(131,236,185);
 }
@@ -26,25 +26,34 @@ body{
 	/*position: absolute;*/
 }
 
+
 a.work-link{
 	/*width: 700px;*/
-	display: block;
+	display: inline-block;
 	color: rgb(255, 226, 0);
+	/*color: white;*/
 	text-decoration: none;
 	text-align: left;
+	padding: 0 20px 20px;
+	border-radius: 25px;
 }
 
 a.work-link::before{
 	content: '';
 	display: block;
-	height: 50px;
+	height: 30px;
 	width: 5px;
-	background: rgb(66,66,66);
+	background: rgb(155,155,155);
 	position: relative;
-	top: 40px;
+	top: 20px;
 	left: -20px;
 }
 
+a.work-link:hover{
+	background-color: rgba(222,222,222,0.6);
+	color: pink;
+	
+}
 
 
 
