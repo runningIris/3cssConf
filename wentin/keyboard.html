@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Keyboard Shadows</title>
+	<style>
+		@media screen and (max-width: 600px){
+			html{
+				font-size: 10px;
+			}
+		}
+
+		@media screen and (min-width:600px) and (max-width: 800px){
+			html{
+				font-size: 12px;
+			}
+		}
+
+
+
+		@media screen and (min-width:800px) and (max-width: 900px){
+			html{
+				font-size: 14px;
+			}
+		}
+		@media screen and (min-width:900px) and (max-width: 1000px){
+			html{
+				font-size: 20px;
+			}
+		}
+		
+
+		.keyboard.icon{
+			height: 12rem;
+			width: 18rem;
+			background-color: rgba(0, 0, 0, 0.1);
+			border-radius: 1.2rem;
+			border: 1.2rem solid black;
+		}
+		.keyboard.icon::before{
+			content: " ";
+			position:  absolute;
+			top: 5rem;
+			left: 5.5rem;
+			width: 3rem;
+			height: 3rem;
+			box-shadow: 
+				-2rem 0 0 -1rem black, 
+				2rem 0 0 -1rem red,
+				0 -2rem 0 -1rem green,
+				0 2rem 0 -1rem blue,
+				6rem 0 0 -1rem pink,
+				4rem -2rem 0 -1rem gray,
+				4rem 2rem 0 -1rem purple,
+				10rem 0 0 -1rem aqua,
+				8rem 2rem 0 -1rem silver,
+				8rem -2rem 0 -1rem brown,
+				/*-2rem 5rem 0 -1rem white,*/
+				/*-1rem 5rem 0 -1rem white,*/
+				0 5rem 0 -1rem white,
+				1rem 5rem 0 -1rem white,
+				2rem 5rem 0 -1rem white,
+				3rem 5rem 0 -1rem white,
+				4rem 5rem 0 -1rem white,
+				5rem 5rem 0 -1rem white,
+				6rem 5rem 0 -1rem white,
+				7rem 5rem 0 -1rem white,
+				8rem 5rem 0 -1rem white;
+				/*9rem 6rem 0 -1rem white,*/
+				/*10rem 6rem 0 -1rem white;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="keyboard icon"></div>
+</body>
+</html>
