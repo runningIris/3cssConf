@@ -35,8 +35,12 @@ a.work-link{
 	/*color: white;*/
 	text-decoration: none;
 	text-align: left;
-	padding: 0 1em 1em;
+	padding: 0 1em 0em;
 	border-radius: 25px;
+}
+
+a.link1{
+	padding-bottom: 1em;
 }
 
 a.work-link::before{
@@ -67,10 +71,10 @@ a.work-link:hover{
 	transform-origin: 10px 10px;
 	position: absolute;
 }
-.beard:nth-child(3){
+.beard1{
 	transform: translate(360px, -22px) rotate(0deg);
 }
-.beard:nth-child(2){
+.beard2{
 	transform: translate(345px, -22px) scaleX(-1) rotate(0deg);
 
 }
@@ -90,12 +94,15 @@ a.work-link:hover{
 	box-sizing: border-box; 
 }
 
-
-
-
-
-
-
-
+.keyboard{
+	color: black;
+	background-color: currentColor;
+	height: 24px;
+	width: 48px;
+	border-radius: 10px;
+	transform-origin: 10px 10px;
+	transform: translate(342px, -27px);
+	box-shadow: -5px 5px 1px -1px gray;
+}
 
 

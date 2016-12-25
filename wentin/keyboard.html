@@ -4,32 +4,16 @@
 	<meta charset="UTF-8">
 	<title>Keyboard Shadows</title>
 	<style>
-		@media screen and (max-width: 600px){
-			html{
-				font-size: 10px;
-			}
-		}
-
-		@media screen and (min-width:600px) and (max-width: 800px){
+		@media screen and (min-device-width: 1200px) and  (max-device-width:1600px){
 			html{
 				font-size: 12px;
 			}
 		}
-
-
-
-		@media screen and (min-width:800px) and (max-width: 900px){
+		@media screen and (min-device-width: 700px) and (max-device-width:1260px){
 			html{
-				font-size: 14px;
+				font-size: 16px;
 			}
 		}
-		@media screen and (min-width:900px) and (max-width: 1000px){
-			html{
-				font-size: 20px;
-			}
-		}
-		
-
 		.keyboard.icon{
 			height: 12rem;
 			width: 18rem;
@@ -50,11 +34,11 @@
 				0 -2rem 0 -1rem green,
 				0 2rem 0 -1rem blue,
 				6rem 0 0 -1rem pink,
-				4rem -2rem 0 -1rem gray,
+				4rem -2rem 0 -1rem yellow,
 				4rem 2rem 0 -1rem purple,
 				10rem 0 0 -1rem aqua,
 				8rem 2rem 0 -1rem silver,
-				8rem -2rem 0 -1rem brown,
+				8rem -2rem 0 -1rem orange,
 				/*-2rem 5rem 0 -1rem white,*/
 				/*-1rem 5rem 0 -1rem white,*/
 				0 5rem 0 -1rem white,
@@ -69,9 +53,31 @@
 				/*9rem 6rem 0 -1rem white,*/
 				/*10rem 6rem 0 -1rem white;*/
 		}
+		p{
+			font-size: 1em;
+			font-family: 'times new roman';
+			font-weight: bold;
+			max-width: 90%;
+		}
+		.home{
+			
+		}
+		a{
+			text-decoration: none;
+			color: pink;
+		}
+		a:hover{
+			color: rgb(253, 78, 113);
+		}
 	</style>
 </head>
 <body>
 	<div class="keyboard icon"></div>
+	<p>
+		All these colorful boxes is drawn using box-shadow of the outer box.
+	</p>
+	<a href="../index.html">
+		<p class="home">HOME</p>
+	</a>
 </body>
 </html>
