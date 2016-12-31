@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Colorful Dots</title>
+	<style>
+		.dot{
+			height: 1rem;
+			width: 1rem;
+			background-color: yellow;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<script>
+	function createDots(n){
+		for(let i = 0, dots=[]; i < n; i++){
+			dots[i] = document.createElement("div");
+			dots[i].className = "dot";
+			document.body.appendChild(dots[i]);
+			console.log(i);
+		}
+	}
+	createDots(3);
+	setInterval(function(){
+		createDots(3);
+	}, 1000)
+	</script>
+</body>
+</html>
