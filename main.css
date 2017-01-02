@@ -94,6 +94,7 @@ a.work-link:hover{
 	box-sizing: border-box; 
 }
 
+/*keyboard*/
 .keyboard{
 	color: black;
 	background-color: currentColor;
@@ -105,4 +106,28 @@ a.work-link:hover{
 	box-shadow: -5px 5px 1px -1px gray;
 }
 
-
+/*bubles*/
+.dots{
+	height: 1.5rem;
+	width: 1rem;
+	/*background-color: rgba(222,123,89,0.6);*/
+	transform: translate(342px, -27px);
+	border-radius: 1rem;
+}
+.dots::before, .dots::after{
+	content: ' ';
+	height: 3rem;
+	width: 3rem;
+	display: block;
+	transform-origin: 1.5 rem 1.5rem;
+}
+.dots::before{
+	transform: translate(-1.1rem, -1rem);
+	border-radius: 1.5rem;
+	background-color: rgba(255, 120, 150, 0.3);
+}
+.dots::after{
+	transform: translate(1.1rem, -4rem);
+	border-radius: 1.5rem;
+	background-color: rgba(0, 47, 167, 0.3);
+};

@@ -50,7 +50,7 @@
 			const y = speed.y;
 			const left = parseInt(getComputedStyle(dots[n]).left.slice(0, -2));
 			const top = parseInt(getComputedStyle(dots[n]).top.slice(0, -2));
-			if(top > 500){
+			if(top > height){
 				turnY = true;
 			} else if(top < 100){
 				turnY = false;
@@ -62,7 +62,7 @@
 				dots[n].style.top = top - y + "px";
 			}
 
-			if(left > 1200){
+			if(left > width){
 				turnX = true;
 			} else if(left < 200){
 				turnX = false;
@@ -87,10 +87,13 @@
 	}
 	const dots = [];
 	const intervals = [];
-	createDots(20);
-	for(let i = 0; i < dots.length; i++){
-		dots[i].style.top = (i * 10) % 50 + 3 + 'rem';
-		intervals[i] = setInterval(moveDots(i), (i+1)*5);
+	const num = 20;
+	const height = 500;
+	const width = 1200;
+	createDots(num);
+	for(let i = 0; i < num; i++){
+		dots[i].style.top = (num-i) * 5 + 3 + 'rem';
+		intervals[i] = setInterval(moveDots(i), (i+1)*2);
 	}
 	</script>
 </body>
