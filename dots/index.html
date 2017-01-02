@@ -5,27 +5,93 @@
 	<title>Colorful Dots</title>
 	<style>
 		.dot{
-			height: 1rem;
-			width: 1rem;
+			height: 3rem;
+			width: 3rem;
 			background-color: yellow;
 			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border: 0.1rem solid rgba(250,250,250,0.4);
+			/*box-shadow: 5rem 9rem 0rem 1rem rgba(240,240,240,0.3), -10rem -9rem 0rem 1rem rgba(240,240,240,0.3);*/
+		}
+		a{
+			text-decoration: none;
+			font-size: 2rem;
+			color: #f9a;
+			font-family: 'Microsoft Yahei'
+		}
+		a:hover{
+			color: #f48;
 		}
 	</style>
 </head>
 <body>
+	<a href="../index.html">Home</a>
 	<script>
 	function createDots(n){
-		for(let i = 0, dots=[]; i < n; i++){
+		for(let i = 0; i < n; i++){
 			dots[i] = document.createElement("div");
 			dots[i].className = "dot";
+			dots[i].style.backgroundColor = setColor(i);
 			document.body.appendChild(dots[i]);
-			console.log(i);
 		}
 	}
-	createDots(3);
-	setInterval(function(){
-		createDots(3);
-	}, 1000)
+	function moveDots(n){
+		let turnX = false;
+		let turnY = false;
+		return function(){
+			const speed = countSpeed(n);
+			const position = [
+					parseInt(getComputedStyle(dots[n]).left.slice(0, -2)), 
+					parseInt(getComputedStyle(dots[n]).top.slice(0, -2))
+				]
+			const x = speed.x;
+			const y = speed.y;
+			const left = parseInt(getComputedStyle(dots[n]).left.slice(0, -2));
+			const top = parseInt(getComputedStyle(dots[n]).top.slice(0, -2));
+			if(top > 500){
+				turnY = true;
+			} else if(top < 100){
+				turnY = false;
+			}
+
+			if(!turnY){
+				dots[n].style.top = top + y + "px";
+			}else{
+				dots[n].style.top = top - y + "px";
+			}
+
+			if(left > 1200){
+				turnX = true;
+			} else if(left < 200){
+				turnX = false;
+			}
+			if(!turnX){
+				dots[n].style.left = left + x + "px";
+			}else{
+				dots[n].style.left = left - x + "px";
+			}
+		}
+	}
+	function countSpeed(n){
+		let x = 1;
+		let y = 1;
+		return {x, y};
+	}
+	function setColor(n){
+		const red = ((n * 45) + 100)%255;
+		const green = ((n * 20) + 80)%255;
+		const blue = (n * 60 + 80)%255;
+		return `rgba(${red}, ${green}, ${blue}, 0.5)`
+	}
+	const dots = [];
+	const intervals = [];
+	createDots(20);
+	for(let i = 0; i < dots.length; i++){
+		dots[i].style.top = (i * 10) % 50 + 3 + 'rem';
+		intervals[i] = setInterval(moveDots(i), (i+1)*5);
+	}
 	</script>
 </body>
 </html>
