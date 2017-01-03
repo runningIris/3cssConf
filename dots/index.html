@@ -38,58 +38,39 @@
 		}
 	}
 	function moveDots(n){
-		let turnX = false;
-		let turnY = false;
+		const style = ['left', 'top'];
+		const maxDevice = [1200, 500];
+		const minDevice= [100, 50];
+		let turn = [false, false];
 		return function(){
-			const speed = countSpeed(n);
 			const position = [
 					parseInt(getComputedStyle(dots[n]).left.slice(0, -2)), 
 					parseInt(getComputedStyle(dots[n]).top.slice(0, -2))
 				]
-			const x = speed.x;
-			const y = speed.y;
-			const left = parseInt(getComputedStyle(dots[n]).left.slice(0, -2));
-			const top = parseInt(getComputedStyle(dots[n]).top.slice(0, -2));
-			if(top > height){
-				turnY = true;
-			} else if(top < 100){
-				turnY = false;
-			}
-
-			if(!turnY){
-				dots[n].style.top = top + y + "px";
-			}else{
-				dots[n].style.top = top - y + "px";
-			}
-
-			if(left > width){
-				turnX = true;
-			} else if(left < 200){
-				turnX = false;
-			}
-			if(!turnX){
-				dots[n].style.left = left + x + "px";
-			}else{
-				dots[n].style.left = left - x + "px";
+			for(let i = 0; i < 2; i++){
+				if( position[i] > maxDevice[i] ){
+					turn[i] = true;
+				} else if( position[i] < minDevice[i] ){
+					turn[i] = false;
+				}
+				
+				dots[n].style[style[i]] = turn[i]? position[i] - 1 + 'px': position[i] + 1 + 'px';
+		
 			}
 		}
 	}
-	function countSpeed(n){
-		let x = 1;
-		let y = 1;
-		return {x, y};
-	}
+	
 	function setColor(n){
 		const red = ((n * 45) + 100)%255;
 		const green = ((n * 20) + 80)%255;
 		const blue = (n * 60 + 80)%255;
 		return `rgba(${red}, ${green}, ${blue}, 0.5)`
 	}
+	
 	const dots = [];
 	const intervals = [];
 	const num = 20;
-	const height = 500;
-	const width = 1200;
+
 	createDots(num);
 	for(let i = 0; i < num; i++){
 		dots[i].style.top = (num-i) * 5 + 3 + 'rem';
