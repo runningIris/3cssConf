@@ -1,0 +1,21 @@
+img{
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.bigPic{
+	height: 100px;
+	width: 120px;
+	background-image: url(Sherlock.jpg);
+	float: left;
+	display: none;
+	animation: fadeIn 3s;
+}
+
+@keyframes fadeIn
+{
+	0%{ opacity: 0; }
+	25%{ opacity: 0.8; }
+	100%{ opacity: 1; }
+}
