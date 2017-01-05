@@ -1,3 +1,6 @@
+.container{
+	position: relative;
+}
 img{
 	width: 30px;
 	height: 30px;
@@ -8,14 +11,18 @@ img{
 	height: 100px;
 	width: 120px;
 	background-image: url(Sherlock.jpg);
-	float: left;
+	position: absolute;
+	border: 1px solid black;
+	border-radius: 20px;
+	top: 10px;
+	left: 45px;
 	display: none;
-	animation: fadeIn 3s;
+	animation: fadeIn 2s;
 }
 
 @keyframes fadeIn
 {
 	0%{ opacity: 0; }
-	25%{ opacity: 0.8; }
+	70%{ opacity: 0.9; }
 	100%{ opacity: 1; }
 }
