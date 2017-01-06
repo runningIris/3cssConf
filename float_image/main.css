@@ -1,5 +1,14 @@
+a{
+	text-decoration: none;
+	font-size: 2rem;
+	color: pink;
+}
+a:hover{
+	color: blue;
+}
 .container{
 	position: relative;
+	margin: 4rem;
 }
 img{
 	width: 30px;
@@ -19,6 +28,8 @@ img{
 	display: none;
 	animation: fadeIn 2s;
 }
+
+
 
 @keyframes fadeIn
 {
