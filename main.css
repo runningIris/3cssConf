@@ -130,4 +130,16 @@ a.work-link:hover{
 	transform: translate(1.1rem, -4rem);
 	border-radius: 1.5rem;
 	background-color: rgba(0, 47, 167, 0.3);
-};
+}
+
+/*float image*/
+.pic{
+	height: 2rem;
+	width: 2rem;
+	transform: translate(21rem,-2rem);
+}
+.pic img{
+	height: 3rem;
+}
+
+

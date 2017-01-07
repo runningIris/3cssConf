@@ -21,7 +21,8 @@ img{
 	width: 120px;
 	background-image: url(Sherlock.jpg);
 	position: absolute;
-	border: 1px solid black;
+	border: 1px solid gray;
+	box-shadow: 2px 2px 2px 2px gray;
 	border-radius: 20px;
 	top: 10px;
 	left: 45px;
