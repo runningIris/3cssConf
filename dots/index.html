@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Colorful Dots</title>
+	<style>
+		.dot{
+			height: 3rem;
+			width: 3rem;
+			background-color: yellow;
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border: 0.1rem solid rgba(250,250,250,0.4);
+			/*box-shadow: 5rem 9rem 0rem 1rem rgba(240,240,240,0.3), -10rem -9rem 0rem 1rem rgba(240,240,240,0.3);*/
+		}
+		a{
+			text-decoration: none;
+			font-size: 2rem;
+			color: #f9a;
+			font-family: 'Microsoft Yahei'
+		}
+		a:hover{
+			color: #f48;
+		}
+	</style>
+</head>
+<body>
+	<a href="../index.html">Home</a>
+	<script>
+	function createDots(n){
+		for(let i = 0; i < n; i++){
+			dots[i] = document.createElement("div");
+			dots[i].className = "dot";
+			dots[i].style.backgroundColor = setColor(i);
+			document.body.appendChild(dots[i]);
+		}
+	}
+	function moveDots(n){
+		const style = ['left', 'top'];
+		const maxDevice = [1200, 500];
+		const minDevice= [100, 50];6
+		let turn = [false, false];
+		return function(){
+			const position = [
+					parseInt(getComputedStyle(dots[n]).left.slice(0, -2)), 
+					parseInt(getComputedStyle(dots[n]).top.slice(0, -2))
+				]
+			for(let i = 0; i < 2; i++){
+				if( position[i] > maxDevice[i] ){
+					turn[i] = true;
+				} else if( position[i] < minDevice[i] ){
+					turn[i] = false;
+				}
+				
+				dots[n].style[style[i]] = turn[i]? position[i] - 1 + 'px': position[i] + 1 + 'px';
+		
+			}
+		}
+	}
+	
+	function setColor(n){
+		const red = ((n * 45) + 100)%255;
+		const green = ((n * 20) + 80)%255;
+		const blue = (n * 60 + 80)%255;
+		return `rgba(${red}, ${green}, ${blue}, 0.5)`
+	}
+	
+	const dots = [];
+	const intervals = [];
+	const num = 20;
+
+	createDots(num);
+	for(let i = 0; i < num; i++){
+		dots[i].style.top = (num-i) * 5 + 3 + 'rem';
+		intervals[i] = setInterval(moveDots(i), (i+1)*2);
+	}
+	</script>
+</body>
+</html>

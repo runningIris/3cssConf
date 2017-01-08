@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css variables</title>
+	<style>
+		:root {
+		  --1: #369;
+		}
+		body {
+		  background-color: var(--1);
+		}
+		/*--mouse-x: 0.1;*/
+		.main{
+			--green = #00f;
+			height: 100px;
+			width: 200px;
+			background-color: var(--green);
+		}
+	</style>
+</head>
+<body>
+	<div class="main"></div>
+</body>
+</html>

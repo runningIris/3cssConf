@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>buble</title>
+	<style>
+		.bubble{
+			height: 2rem;
+			width: 2rem;
+			border-radius: 6rem;
+			float: left;
+			animation: move 5s infinite;
+		}
+
+		@keyframes move 
+		{
+			0%{ margin: 0; height: 2rem; width: 2rem;}
+			25%{ margin: 2rem; height: 1rem; width: 1rem;}
+			75%{ margin: 6rem; height: 4rem; width: 4rem;}
+			100%{ margin: 0rem; height: 2rem; width: 2rem;}
+		}
+	</style>
+</head>
+<body>
+<script src="bubble.js"></script>
+</body>
+</html>
