@@ -1,0 +1,18 @@
+body{
+	color: ;
+	font: bold 18px/25px sans-serif;
+}
+iframe{
+	border: 5px solid #eeaacc;
+	background-color: #99aaff;
+	float: left;
+
+}
+.editable_box{
+	height: 400px;
+	width: 300px;
+	float: left;
+	margin: 20px;
+	padding: 10px;
+	border: 3px solid #aabbff;
+}
