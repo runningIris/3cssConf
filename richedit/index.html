@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<iframe name="richEdit" src="sub.html" style="width: 100px; height: 100px;"></iframe>
+	<script>
+		window.onload = function(){
+			frames['richEdit'].document.designMode = "on";
+			console.log('load')
+		}
+	</script>
+</body>
+</html>
