@@ -16,3 +16,14 @@ iframe{
 	padding: 10px;
 	border: 3px solid #aabbff;
 }
+.control-icon{
+	display: inline-block;
+	padding: 5px;
+	box-sizing: border-box;
+	background-color: yellow;
+	border-radius: 10px;
+}
+.control-icon:hover{
+background-color: brown;
+border: none;
+}

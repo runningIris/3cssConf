@@ -6,13 +6,27 @@
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
+	
 	<iframe name="richEdit" src="sub.html" style="width: 300px; height: 500px;"></iframe>
+
 	<div class="editable_box" contenteditable spellcheck=false>
+		<div class="controller">
+			<i class="control-icon">bold</i>
+			<i class="control-icon">italic</i>
+		</div>
 		Hello, this is an box that you can edit. No more javascript, no more iframe, just a single word "contenteditable" will do.
 	</div>
 	<script>
 		window.onload = function(){
-			frames['richEdit'].document.designMode = "on";
+			// frames['richEdit'].document.designMode = "on";
+		
+			var controlIcons = document.getElementsByClassName('control-icon');
+			var list = ['bold', 'italic'];
+			for(let i = 0; i < controlIcons.length; i++){
+				controlIcons[i].addEventListener('click', function(){
+					document.execCommand(list[i], true, null);
+				})
+			}
 		}
 	</script>
 </body>

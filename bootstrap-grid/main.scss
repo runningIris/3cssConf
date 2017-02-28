@@ -1,0 +1,65 @@
+html, body{
+	padding: 0;
+	margin: 0;
+	height: 120%;
+}
+body{
+	display: flex;
+	flex-direction: column;
+	header{
+		flex: 1;
+		background: green;
+	}
+	section{
+		flex: 9;
+		background: pink;
+		display: flex;
+		flex-direction: row;
+	}
+	footer{
+		flex: 2;
+		background: yellow;
+	}
+}
+
+section{
+	aside{
+		flex: 2;
+	}
+	article{
+		background: purple;
+		flex: 7;
+	}
+}
+
+
+header{
+	text-align: center;
+}
+.navigation{
+	display: flex;
+	flex-direction: column; 
+	height: 100%;
+	margin: 0;
+	padding: 0;
+		box-sizing: border-box;
+
+
+	li{
+		display: inline-block;
+		flex: 1;
+		box-sizing: border-box;
+		background-color: white;
+		/*border: 1px solid gray;*/
+		text-align: center;
+		border-left: 20px solid gray;
+		a{
+			text-decoration: none;
+			line-height: 5rem;
+		}
+	}
+	li:hover{
+		background-color: black;
+		border-left: 20px solid brown;
+	}
+}
