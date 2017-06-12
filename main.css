@@ -37,10 +37,11 @@ a.work-link{
 	text-align: left;
 	padding: 0 1em 0em;
 	border-radius: 25px;
+	padding-bottom: 1em;
 }
 
-a.link1{
-	padding-bottom: 1em;
+a.link2{
+	padding-bottom: 0;
 }
 
 a.work-link::before{
